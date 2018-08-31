@@ -19,6 +19,8 @@ class WhatsNewRoundedButton: UIButton {
     /// The onPress closure
     private var onPress: (() -> Void)?
     
+    private var gradient: WhatsNewViewController.Gradient?
+    
     // MARK: Initializer
     
     /// Convenience initializer
@@ -36,6 +38,7 @@ class WhatsNewRoundedButton: UIButton {
         self.onPress = onPress
         // Set highlighted background color
         self.highlightedBackgroundColor = configuration.completionButton.backgroundColor
+        self.gradient = configuration.completionButton.backgroundGradient
         // Set title
         self.setTitle(title, for: .normal)
         // Perform configuration
@@ -51,8 +54,9 @@ class WhatsNewRoundedButton: UIButton {
         if self.currentBackgroundImage == nil {
             // Set the backgroundimage
             self.setBackgroundImage(
-                self.getImageWithColor(
-                    self.highlightedBackgroundColor,
+                self.renderImage(
+                    color: self.highlightedBackgroundColor,
+                    gradient: self.gradient,
                     size: self.bounds.size
                 ),
                 for: .normal
@@ -90,21 +94,16 @@ class WhatsNewRoundedButton: UIButton {
     ///   - color: The color of the returned UIImage
     ///   - size: The size of the returned UIImage
     /// - Returns: Optional UIImage
-    private func getImageWithColor(_ color: UIColor, size: CGSize) -> UIImage? {
-        // Initialize rect
-        let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
-        // Begin Graphics Context
-        UIGraphicsBeginImageContextWithOptions(size, false, 0)
-        // Set fill color
-        color.setFill()
-        // Fill rect with color
-        UIRectFill(rect)
-        // Retrieve Image from Graphics Context
-        let image: UIImage? = UIGraphicsGetImageFromCurrentImageContext()
-        // End Graphics Context
-        UIGraphicsEndImageContext()
-        // Return image
-        return image
+    private func renderImage(
+        color: UIColor,
+        gradient: WhatsNewViewController.Gradient?,
+        size: CGSize
+    ) -> UIImage? {
+        if let gradient = gradient {
+            return ImageRenderer.renderGradientOfSize(size, gradient: gradient)
+        } else {
+            return ImageRenderer.renderImageOfColor(color, size: size)
+        }
     }
     
     /// Button did touch up inside

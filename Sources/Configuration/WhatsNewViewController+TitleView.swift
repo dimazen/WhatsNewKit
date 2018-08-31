@@ -13,6 +13,10 @@ public extension WhatsNewViewController {
     /// The TitleView
     struct TitleView: Equatable {
         
+        /// Weight of the TitleView on the screen.
+        /// Describes relative amount of space occupied by the component
+        public var weight: CGFloat = 0.2
+        
         /// The title font
         public var titleFont: UIFont
         

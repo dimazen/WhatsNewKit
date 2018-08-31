@@ -14,6 +14,10 @@ public extension WhatsNewViewController {
     
     /// The CompletionButton
     struct CompletionButton: Equatable {
+
+        /// Weight of the TitleView on the screen.
+        /// Describes relative amount of space occupied by the component
+        public var weight: CGFloat = 0.2
         
         /// The Title
         public var title: String
@@ -26,6 +30,8 @@ public extension WhatsNewViewController {
         
         /// The background color
         public var backgroundColor: UIColor
+        
+        public var backgroundGradient: Gradient?
         
         /// The title font
         public var titleFont: UIFont
@@ -54,6 +60,7 @@ public extension WhatsNewViewController {
                     action: Action = .dismiss,
                     hapticFeedback: HapticFeedback? = nil,
                     backgroundColor: UIColor = .whatsNewKitBlue,
+                    gradient: Gradient? = nil,
                     titleFont: UIFont = .systemFont(ofSize: 17, weight: .semibold),
                     titleColor: UIColor = .white,
                     cornerRadius: CGFloat = 8.0,

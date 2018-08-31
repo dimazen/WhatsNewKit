@@ -46,6 +46,10 @@
 		3DDDB59720B832AB001D59C5 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDDB59620B832AB001D59C5 /* UIColorExtension.swift */; };
 		3DFB700020B34F8800673FD6 /* WhatsNewVersionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFB6FFF20B34F8800673FD6 /* WhatsNewVersionStore.swift */; };
 		52D6D9871BEFF229002C0205 /* WhatsNewKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* WhatsNewKit.framework */; };
+		E8A6B59C21398C5400BF6FAA /* WhatsNewViewController+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A6B59A21398C4D00BF6FAA /* WhatsNewViewController+Gradient.swift */; };
+		E8A6B5A02139910E00BF6FAA /* ImageRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A6B59E213990C800BF6FAA /* ImageRenderer.swift */; };
+		E8A6B5A32139944300BF6FAA /* CGPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A6B5A12139941C00BF6FAA /* CGPointExtension.swift */; };
+		E8A6B5A6213994C100BF6FAA /* CGFloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A6B5A4213994A900BF6FAA /* CGFloatExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +136,10 @@
 		52D6D9861BEFF229002C0205 /* WhatsNewKit-iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WhatsNewKit-iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD2FAA261CD0B6D800659CF4 /* WhatsNewKit.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WhatsNewKit.plist; sourceTree = "<group>"; };
 		AD2FAA281CD0B6E100659CF4 /* WhatsNewKitTests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WhatsNewKitTests.plist; sourceTree = "<group>"; };
+		E8A6B59A21398C4D00BF6FAA /* WhatsNewViewController+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WhatsNewViewController+Gradient.swift"; sourceTree = "<group>"; };
+		E8A6B59E213990C800BF6FAA /* ImageRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRenderer.swift; sourceTree = "<group>"; };
+		E8A6B5A12139941C00BF6FAA /* CGPointExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPointExtension.swift; sourceTree = "<group>"; };
+		E8A6B5A4213994A900BF6FAA /* CGFloatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +216,7 @@
 				3D5D06C020C7CAEC00EC7C46 /* WhatsNewViewController+ItemsView.swift */,
 				3D2412CE20BAE75E005A04D6 /* WhatsNewViewController+DetailButton.swift */,
 				3D2412D020BAE7C6005A04D6 /* WhatsNewViewController+CompletionButton.swift */,
+				E8A6B59A21398C4D00BF6FAA /* WhatsNewViewController+Gradient.swift */,
 				3D13455D20BC8AFA00BE0FF8 /* WhatsNewViewController+HapticFeedback.swift */,
 				3D5D06BE20C7CA2700EC7C46 /* WhatsNewViewController+Animation.swift */,
 			);
@@ -276,6 +285,8 @@
 			isa = PBXGroup;
 			children = (
 				3DDDB59620B832AB001D59C5 /* UIColorExtension.swift */,
+				E8A6B5A12139941C00BF6FAA /* CGPointExtension.swift */,
+				E8A6B5A4213994A900BF6FAA /* CGFloatExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -334,6 +345,7 @@
 		8933C7811EB5B7E0000D00A4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				E8A6B59D213990B400BF6FAA /* Misc */,
 				3D92C67020AF883300A10333 /* WhatsNewViewController.swift */,
 				3D92C67A20AF88E000A10333 /* Configuration */,
 				3DFB6FFE20B34F7E00673FD6 /* Store */,
@@ -369,6 +381,14 @@
 				AD2FAA281CD0B6E100659CF4 /* WhatsNewKitTests.plist */,
 			);
 			name = Tests;
+			sourceTree = "<group>";
+		};
+		E8A6B59D213990B400BF6FAA /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				E8A6B59E213990C800BF6FAA /* ImageRenderer.swift */,
+			);
+			path = Misc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -552,6 +572,8 @@
 				3D5D06BD20C7C9C700EC7C46 /* WhatsNewViewController+TitleView.swift in Sources */,
 				3DDDB59720B832AB001D59C5 /* UIColorExtension.swift in Sources */,
 				3D92C66A20AF87E600A10333 /* WhatsNew.swift in Sources */,
+				E8A6B59C21398C5400BF6FAA /* WhatsNewViewController+Gradient.swift in Sources */,
+				E8A6B5A32139944300BF6FAA /* CGPointExtension.swift in Sources */,
 				3DFB700020B34F8800673FD6 /* WhatsNewVersionStore.swift in Sources */,
 				3D92C67420AF88AC00A10333 /* WhatsNewItemTableViewCell.swift in Sources */,
 				3D92C67720AF88B400A10333 /* WhatsNewRoundedButton.swift in Sources */,
@@ -567,6 +589,8 @@
 				3D5D06BF20C7CA2700EC7C46 /* WhatsNewViewController+Animation.swift in Sources */,
 				3D562CB920B3FD3200603182 /* WhatsNew+Version.swift in Sources */,
 				3DA667A620B0C8AF00DB18FF /* WhatsNewTitleView.swift in Sources */,
+				E8A6B5A02139910E00BF6FAA /* ImageRenderer.swift in Sources */,
+				E8A6B5A6213994C100BF6FAA /* CGFloatExtension.swift in Sources */,
 				3D2412D120BAE7C6005A04D6 /* WhatsNewViewController+CompletionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

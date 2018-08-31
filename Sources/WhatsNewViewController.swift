@@ -124,21 +124,23 @@ public class WhatsNewViewController: UIViewController {
             x: 0,
             y: 0,
             width: self.view.frame.size.width,
-            height: self.view.frame.size.height * 0.2
+            height: self.view.frame.size.height * configuration.titleView.weight
         )
         // Set ItemsView frame
         self.itemsView.frame = CGRect(
             x: 0,
             y: self.titleView.frame.size.height,
             width: self.view.frame.size.width,
-            height: self.view.frame.size.height * 0.6
+            height: self.view.frame.size.height * configuration.itemsView.weight
         )
+        
+        let completionButtonHeight = self.view.frame.size.height * configuration.completionButton.weight
         // Set ButtonView frame
         self.buttonView.frame = CGRect(
             x: 0,
-            y: self.view.frame.size.height - self.view.frame.size.height * 0.2,
+            y: self.view.frame.size.height - completionButtonHeight,
             width: self.view.frame.size.width,
-            height: self.view.frame.size.height * 0.2
+            height: completionButtonHeight
         )
     }
     
