@@ -23,6 +23,16 @@ public extension WhatsNewViewController {
         /// The title color
         public var titleColor: UIColor
         
+        public var titleAlignment: NSTextAlignment
+        
+        /// The subtitle font
+        public var subtitleFont: UIFont
+        
+        /// The subtitle color
+        public var subtitleColor: UIColor
+        
+        public var subtitleAlignment: NSTextAlignment
+        
         /// The Animation
         public var animation: Animation?
         
@@ -32,11 +42,20 @@ public extension WhatsNewViewController {
         ///   - titleFont: The title font. Default value `size: 30, weight: semibold`
         ///   - titleColor: The title color. Default value `.black`
         ///   - animation: The Animation. Default value `nil`
-        public init(titleFont: UIFont = .systemFont(ofSize: 30, weight: .semibold),
-                    titleColor: UIColor = .black,
-                    animation: Animation? = nil) {
+        public init(
+            titleFont: UIFont = .systemFont(ofSize: 30, weight: .semibold),
+            titleColor: UIColor = .black,
+            titleAlignment: NSTextAlignment = .center,
+            subtitleFont: UIFont = .systemFont(ofSize: 15, weight: .medium),
+            subtitleColor: UIColor = .black,
+            subtitleAlignment: NSTextAlignment = .center,
+            animation: Animation? = nil) {
             self.titleFont = titleFont
             self.titleColor = titleColor
+            self.titleAlignment = titleAlignment
+            self.subtitleFont = subtitleFont
+            self.subtitleColor = subtitleColor
+            self.subtitleAlignment = subtitleAlignment
             self.animation = animation
         }
         

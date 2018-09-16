@@ -35,6 +35,7 @@ public class WhatsNewViewController: UIViewController {
     /// The TitleView
     private lazy var titleView: UIView = WhatsNewTitleView(
         title: self.whatsNew.title,
+        subtitle: self.whatsNew.subtitle,
         configuration: self.configuration
     )
     

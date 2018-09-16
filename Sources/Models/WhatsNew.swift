@@ -21,6 +21,9 @@ public struct WhatsNew: Codable, Equatable {
     /// The title
     public let title: String
     
+    /// The subtitle
+    public let subtitle: String?
+    
     /// The items
     public let items: [Item]
     
@@ -34,9 +37,11 @@ public struct WhatsNew: Codable, Equatable {
     ///   - items: The Items
     public init(version: Version = .current(inBundle: .main),
                 title: String,
+                subtitle: String? = nil,
                 items: [Item]) {
         self.version = version
         self.title = title
+        self.subtitle = subtitle
         self.items = items
     }
     
