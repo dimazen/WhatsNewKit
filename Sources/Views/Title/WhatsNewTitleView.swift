@@ -109,20 +109,22 @@ class WhatsNewTitleView: UIView {
         let subtitleFrame: CGRect
         if subtitle != nil {
             let titleHeight = floor(height * 0.4)
-            let subtitleHeight = floor(height * 0.4)
+            let subtitleHeight = floor(height * 0.3)
             
             titleFrame = CGRect(
                 x: 0,
                 y: height - titleHeight - subtitleHeight,
                 width: self.frame.width,
                 height: titleHeight
-            ).insetBy(dx: layoutMargins.left, dy: 0)
+            )
+            // Initialize relative padding
+            let relativePadding: CGFloat = 0.05
             subtitleFrame = CGRect(
-                x: 0,
+                x: self.frame.width * relativePadding,
                 y: height - subtitleHeight,
-                width: self.frame.width,
+                width: self.frame.width - self.frame.width * relativePadding * 2,
                 height: subtitleHeight
-            ).insetBy(dx: layoutMargins.left, dy: 0)
+            )
         } else {
             let titleHeight = floor(height * 0.7)
             titleFrame = CGRect(
