@@ -17,6 +17,8 @@ public extension WhatsNewViewController {
         /// Describes relative amount of space occupied by the component
         public var weight: CGFloat = 0.2
         
+        public var relativePadding: CGFloat
+        
         /// The title font
         public var titleFont: UIFont
         
@@ -49,6 +51,7 @@ public extension WhatsNewViewController {
             subtitleFont: UIFont = .systemFont(ofSize: 15, weight: .medium),
             subtitleColor: UIColor = .black,
             subtitleAlignment: NSTextAlignment = .center,
+            relativePadding: CGFloat = 0.1,
             animation: Animation? = nil) {
             self.titleFont = titleFont
             self.titleColor = titleColor
@@ -56,6 +59,7 @@ public extension WhatsNewViewController {
             self.subtitleFont = subtitleFont
             self.subtitleColor = subtitleColor
             self.subtitleAlignment = subtitleAlignment
+            self.relativePadding = relativePadding
             self.animation = animation
         }
         

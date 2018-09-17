@@ -103,34 +103,33 @@ class WhatsNewTitleView: UIView {
             self.hasAnimated = true
         }
         
-        let height = self.frame.height
-        
+        let size = self.frame.size
+        let padding = size.width * self.configuration.titleView.relativePadding
         let titleFrame: CGRect
         let subtitleFrame: CGRect
         if subtitle != nil {
-            let titleHeight = floor(height * 0.4)
-            let subtitleHeight = floor(height * 0.3)
-            
+            let titleHeight = floor(size.height * 0.4)
+            let subtitleHeight = floor(size.height * 0.3)
+
             titleFrame = CGRect(
-                x: 0,
-                y: height - titleHeight - subtitleHeight,
-                width: self.frame.width,
+                x: padding,
+                y: size.height - titleHeight - subtitleHeight,
+                width: size.width - padding * 2,
                 height: titleHeight
             )
-            // Initialize relative padding
-            let relativePadding: CGFloat = 0.05
+            
             subtitleFrame = CGRect(
-                x: self.frame.width * relativePadding,
-                y: height - subtitleHeight,
-                width: self.frame.width - self.frame.width * relativePadding * 2,
+                x: padding,
+                y: size.height - subtitleHeight,
+                width: size.width - padding * 2,
                 height: subtitleHeight
             )
         } else {
-            let titleHeight = floor(height * 0.7)
+            let titleHeight = floor(size.height * 0.7)
             titleFrame = CGRect(
-                x: 0,
-                y: height - titleHeight,
-                width: self.frame.width,
+                x: padding,
+                y: size.height - titleHeight,
+                width: size.width - padding * 2,
                 height: titleHeight
             )
             subtitleFrame = .zero

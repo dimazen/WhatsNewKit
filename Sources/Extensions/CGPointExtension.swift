@@ -11,10 +11,3 @@ import CoreGraphics
 public func * (lhs: CGPoint, rhs: CGPoint) -> CGPoint {
     return CGPoint(x: lhs.x * rhs.x, y: lhs.y * rhs.y)
 }
-
-extension CGPoint {
-    
-    func uniformed() -> CGPoint {
-        return CGPoint(x: x.uniformed(), y: y.uniformed())
-    }
-}

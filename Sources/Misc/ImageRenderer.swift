@@ -43,11 +43,11 @@ final class ImageRenderer {
     
         let start = CGPoint(x: size.width, y: size.height) * gradient.startPoint
         let end = CGPoint(x: size.width, y: size.height) * gradient.endPoint
-        
+
         context.drawLinearGradient(
             cgGradient,
-            start: start.uniformed(),
-            end: end.uniformed(),
+            start: start,
+            end: end,
             options: []
         )
         

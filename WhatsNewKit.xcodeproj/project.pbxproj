@@ -49,7 +49,6 @@
 		E8A6B59C21398C5400BF6FAA /* WhatsNewViewController+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A6B59A21398C4D00BF6FAA /* WhatsNewViewController+Gradient.swift */; };
 		E8A6B5A02139910E00BF6FAA /* ImageRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A6B59E213990C800BF6FAA /* ImageRenderer.swift */; };
 		E8A6B5A32139944300BF6FAA /* CGPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A6B5A12139941C00BF6FAA /* CGPointExtension.swift */; };
-		E8A6B5A6213994C100BF6FAA /* CGFloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A6B5A4213994A900BF6FAA /* CGFloatExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,7 +138,6 @@
 		E8A6B59A21398C4D00BF6FAA /* WhatsNewViewController+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WhatsNewViewController+Gradient.swift"; sourceTree = "<group>"; };
 		E8A6B59E213990C800BF6FAA /* ImageRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRenderer.swift; sourceTree = "<group>"; };
 		E8A6B5A12139941C00BF6FAA /* CGPointExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPointExtension.swift; sourceTree = "<group>"; };
-		E8A6B5A4213994A900BF6FAA /* CGFloatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,7 +284,6 @@
 			children = (
 				3DDDB59620B832AB001D59C5 /* UIColorExtension.swift */,
 				E8A6B5A12139941C00BF6FAA /* CGPointExtension.swift */,
-				E8A6B5A4213994A900BF6FAA /* CGFloatExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -590,7 +587,6 @@
 				3D562CB920B3FD3200603182 /* WhatsNew+Version.swift in Sources */,
 				3DA667A620B0C8AF00DB18FF /* WhatsNewTitleView.swift in Sources */,
 				E8A6B5A02139910E00BF6FAA /* ImageRenderer.swift in Sources */,
-				E8A6B5A6213994C100BF6FAA /* CGFloatExtension.swift in Sources */,
 				3D2412D120BAE7C6005A04D6 /* WhatsNewViewController+CompletionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
